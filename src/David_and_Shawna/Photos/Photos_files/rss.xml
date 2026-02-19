@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:iphoto="urn:iphoto:property" xmlns:iweb="http://www.apple.com/iweb" version="2.0">
+  <channel>
+    <title>Photos</title>
+    <link>http://davidandshawna.us/David_and_Shawna/Photos/Photos.html</link>
+    <description>Photos</description>
+    <item>
+      <title>Wedding</title>
+      <link>http://davidandshawna.us/David_and_Shawna/Photos/Pages/Wedding.html</link>
+      <guid isPermaLink="false">ae44ed0c-73db-418d-9e5d-e8afb84773f1</guid>
+    </item>
+    <item>
+      <title>House</title>
+      <link>http://davidandshawna.us/David_and_Shawna/Photos/Pages/House.html</link>
+      <guid isPermaLink="false">c23a0863-486b-469e-8d73-1041f669dc8f</guid>
+    </item>
+    <item>
+      <title>Disney</title>
+      <link>http://davidandshawna.us/David_and_Shawna/Photos/Pages/Disney.html</link>
+      <guid isPermaLink="false">85b92592-72a5-4b25-bddb-b62ab8843de9</guid>
+    </item>
+    <item>
+      <title>Cruise</title>
+      <link>http://davidandshawna.us/David_and_Shawna/Photos/Pages/Cruise.html</link>
+      <guid isPermaLink="false">2d8ca2ae-99c6-415b-b841-ba5cbaa83fd2</guid>
+    </item>
+    <item>
+      <title>Hawaii</title>
+      <link>http://davidandshawna.us/David_and_Shawna/Photos/Pages/Hawaii.html</link>
+      <guid isPermaLink="false">3efb9dda-634c-45ae-ba99-1b007e9118bf</guid>
+    </item>
+    <item>
+      <title>Pixar</title>
+      <link>http://davidandshawna.us/David_and_Shawna/Photos/Pages/Pixar.html</link>
+      <guid isPermaLink="false">abc29bb7-24c4-4d11-83ee-f97357d35154</guid>
+    </item>
+  </channel>
+</rss>

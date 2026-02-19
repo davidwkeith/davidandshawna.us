@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Guest List</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="David W. Keith">
+	<!-- Date: 2010-08-21 -->
+	<style>
+        table {
+            border: 1px solid #666666; 
+            border-collapse: collapse;
+        }
+        td { border: 1px solid #666666;	}
+        th { border: 1px solid #666666; }
+	</style>
+</head>
+<body>
+    <table id="guests"></table>
+<script>
+    var rsvp = new XMLHttpRequest();
+    rsvp.open("GET", "guests.csv", true);
+    rsvp.onreadystatechange = function () {
+        if (rsvp.readyState == 4)  {
+            var san_jose_count = 0, boston_count = 0, kansas_city_count = 0;
+            var guests = rsvp.responseText.split("\n");
+            var row = guests[0].replace(/(^\"|\"$)/g, '').split('", "');
+            var html = "<tr><th>" + row[0] + "</th><th>" + row[1] + 
+                "</th><th>" + row[3] + "</th><th>" + row[4] + "</th><th>" + row[5] + "</th></tr>";
+            for (var i = 1; i<guests.length; i++) {
+                if (guests[i].length > 0){
+                    row = guests[i].replace(/(^\"|\"$)/g, '').split('", "');
+                    if (row[3] == 'Attending') {
+                        san_jose_count += Number(row[2]) ? Number(row[2]) : 0;
+                        row[3] = row[2];
+                    }
+                    if (row[4] == 'Attending') {
+                        boston_count += Number(row[2]) ? Number(row[2]) : 0;
+                        row[4] = row[2];
+                    }
+                    if (row[5] == 'Attending') {
+                        kansas_city_count += Number(row[2]) ? Number(row[2]) : 0;
+                        row[5] = row[2];
+                    }
+                    html+= "<tr><td>" + row[0].replace(/\"\"/g, '"') + "</td><td>" + row[1] + 
+                        "</td><td>" + row[3] +"</td><td>" + row[4] + "</td><td>" + row[5] + "</td></tr>";
+                }
+            }
+            html += "<tr><th></th><th></th><th>" + san_jose_count + "</th><th>" + boston_count + "</th><th>" + kansas_city_count + "</th></tr>";
+            document.getElementById("guests").innerHTML = html;
+        }
+    }
+    rsvp.send(null);
+</script>
+</body>
+</html>
