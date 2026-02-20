@@ -1,0 +1,14 @@
+{
+  "name": "@dwk/davidandshawna.us",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "NODE_OPTIONS=--experimental-strip-types eleventy --config=eleventy.config.ts --serve",
+    "build": "NODE_OPTIONS=--experimental-strip-types eleventy --config=eleventy.config.ts"
+  },
+  "dependencies": {
+    "@dwk/eleventy-shared": "*",
+    "@11ty/eleventy": "^3.1.2"
+  }
+}
